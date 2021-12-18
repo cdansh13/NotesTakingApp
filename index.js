@@ -45,8 +45,9 @@ function wordCount(){
 }
 function saveText(){
 let text = document.getElementById("TextToAnalyze").value;
+let fname = prompt("What should be the file name?(Please also add .txt or any extention at last!")
 var a = document.createElement("a");
 a.href = window.URL.createObjectURL(new Blob([text], { type: "text/plain" }));
-a.download = "YourText.txt";
+a.download = fname;
 a.click();
 }
